@@ -3,617 +3,120 @@
 @section('content')
 <div class="page-body">
           <div class="container-xl">
+            
             <div class="row row-deck row-cards">
-              <div class="col-sm-6 col-lg-3">
+              
+            <div class="col-md-6 col-lg-3">
                 <div class="card">
                   <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">Sales</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="h1 mb-3">75%</div>
-                    <div class="d-flex mb-2">
-                      <div>Conversion rate</div>
-                      <div class="ms-auto">
-                        <span class="text-green d-inline-flex align-items-center lh-1">
-                          7% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="progress progress-sm">
-                      <div class="progress-bar bg-primary" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="75% Complete">
-                        <span class="visually-hidden">75% Complete</span>
-                      </div>
-                    </div>
+                    <h3 class="card-title">About</h3>
+                    <div class="img-responsive img-responsive-5x9 card-img-top" style="background-image: url(./static/photos/group_1.png)"></div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-lg-3">
+              <div class="col-md-6 col-lg-3" >
                 <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">Revenue</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-baseline">
-                      <div class="h1 mb-0 me-2">$4,300</div>
-                      <div class="me-auto">
-                        <span class="text-green d-inline-flex align-items-center lh-1">
-                          8% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
-                        </span>
-                      </div>
-                    </div>
+                  <!-- Photo -->
+                  <div class="img-responsive img-responsive-21x9 card-img-top" style="background-image: url(./static/photos/sop-doc.jpg)"></div>
+                  <div class="card-body" >
+                    <h3 class="card-title">Sop Data Center</h3>
+                    <p class="text-secondary">Berisikan dokumen terkait seluruh sop pekerjaan di Data Center BCA Syariah.</p>
                   </div>
-                  <div id="chart-revenue-bg" class="chart-sm"></div>
                 </div>
               </div>
-              <div class="col-sm-6 col-lg-3">
+             
+              <div class="col-md-6 col-lg-3" >
                 <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">New clients</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex align-items-baseline">
-                      <div class="h1 mb-3 me-2">6,782</div>
-                      <div class="me-auto">
-                        <span class="text-yellow d-inline-flex align-items-center lh-1">
-                          0% <!-- Download SVG icon from http://tabler-icons.io/i/minus -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /></svg>
-                        </span>
-                      </div>
-                    </div>
-                    <div id="chart-new-clients" class="chart-sm"></div>
+                  <!-- Photo -->
+                  <div class="img-responsive img-responsive-21x9 card-img-top" style="background-image: url(./static/photos/user-iconcrop.jpg)"></div>
+                  <div class="card-body" >
+                    <h3 class="card-title">Karyawan Data Center</h3>
+                    <p class="text-secondary">Data-data karyawan khususnya yang berada di Data Center.</p>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-lg-3">
+              <div class="col-md-6 col-lg-3">
                 <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <div class="subheader">Active users</div>
-                      <div class="ms-auto lh-1">
-                        <div class="dropdown">
-                          <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Last 7 days</a>
-                          <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item active" href="#">Last 7 days</a>
-                            <a class="dropdown-item" href="#">Last 30 days</a>
-                            <a class="dropdown-item" href="#">Last 3 months</a>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="card-body p-4 text-center">
+                    <span class="avatar avatar-xl mb-3 rounded" ></span>
+                    <h3 class="m-0 mb-1"><a href="#">{{ Auth::user()->name }}</a></h3>
+                    <div class="text-secondary">{{ Auth::user()->email }}</div>
+                    <div class="mt-3">
+                      <span class="badge bg-green-lt">Admin</span>
                     </div>
-                    <div class="d-flex align-items-baseline">
-                      <div class="h1 mb-3 me-2">2,986</div>
-                      <div class="me-auto">
-                        <span class="text-green d-inline-flex align-items-center lh-1">
-                          4% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                          <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
-                        </span>
-                      </div>
-                    </div>
-                    <div id="chart-active-users" class="chart-sm"></div>
+                  </div>
+                  <div class="d-flex">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="card-btn"><!-- Download SVG icon from http://tabler-icons.io/i/phone -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M13 21h-6a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v.5"></path>
+                        <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                        <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+                        <path d="M22 22l-5 -5"></path>
+                        <path d="M17 22l5 -5"></path>
+                      </svg>
+                      Logout</a>
                   </div>
                 </div>
               </div>
-              <div class="col-12">
-                <div class="row row-cards">
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="card card-sm">
-                      <div class="card-body">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                            <span class="bg-primary text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/currency-dollar -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2" /><path d="M12 3v3m0 12v3" /></svg>
-                            </span>
-                          </div>
-                          <div class="col">
-                            <div class="font-weight-medium">
-                              132 Sales
-                            </div>
-                            <div class="text-muted">
-                              12 waiting payments
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="card card-sm">
-                      <div class="card-body">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                            <span class="bg-green text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/shopping-cart -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
-                            </span>
-                          </div>
-                          <div class="col">
-                            <div class="font-weight-medium">
-                              78 Orders
-                            </div>
-                            <div class="text-muted">
-                              32 shipped
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="card card-sm">
-                      <div class="card-body">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                            <span class="bg-twitter text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/brand-twitter -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" /></svg>
-                            </span>
-                          </div>
-                          <div class="col">
-                            <div class="font-weight-medium">
-                              623 Shares
-                            </div>
-                            <div class="text-muted">
-                              16 today
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="card card-sm">
-                      <div class="card-body">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                            <span class="bg-facebook text-white avatar"><!-- Download SVG icon from http://tabler-icons.io/i/brand-facebook -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
-                            </span>
-                          </div>
-                          <div class="col">
-                            <div class="font-weight-medium">
-                              132 Likes
-                            </div>
-                            <div class="text-muted">
-                              21 today
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
+                              
               </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="card-title">Traffic summary</h3>
-                    <div id="chart-mentions" class="chart-lg"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="card-title">Locations</h3>
-                    <div class="ratio ratio-21x9">
-                      <div>
-                        <div id="map-world" class="w-100 h-100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="row row-cards">
-                  <div class="col-12">
-                    <div class="card">
-                      <div class="card-body">
-                        <p class="mb-3">Using Storage <strong>6854.45 MB </strong>of 8 GB</p>
-                        <div class="progress progress-separated mb-3">
-                          <div class="progress-bar bg-primary" role="progressbar" style="width: 44%" aria-label="Regular"></div>
-                          <div class="progress-bar bg-info" role="progressbar" style="width: 19%" aria-label="System"></div>
-                          <div class="progress-bar bg-success" role="progressbar" style="width: 9%" aria-label="Shared"></div>
+              <br>
+
+              <!-- <div class="card-body">
+                    <div id="carousel-captions" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item">
+                          <img class="d-block w-100" alt="" src="./static/photos/coffee-on-a-table-with-other-items.jpg">
+                          <div class="carousel-caption-background d-none d-md-block"></div>
+                          <div class="carousel-caption d-none d-md-block">
+                            <h3>Slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                          </div>
                         </div>
-                        <div class="row">
-                          <div class="col-auto d-flex align-items-center pe-2">
-                            <span class="legend me-2 bg-primary"></span>
-                            <span>Regular</span>
-                            <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">915MB</span>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" alt="" src="./static/photos/young-entrepreneur-working-from-a-modern-cafe-2.jpg">
+                          <div class="carousel-caption-background d-none d-md-block"></div>
+                          <div class="carousel-caption d-none d-md-block">
+                            <h3>Slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                           </div>
-                          <div class="col-auto d-flex align-items-center px-2">
-                            <span class="legend me-2 bg-info"></span>
-                            <span>System</span>
-                            <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">415MB</span>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" alt="" src="./static/photos/soft-photo-of-woman-on-the-bed-with-the-book-and-cup-of-coffee-in-hands.jpg">
+                          <div class="carousel-caption-background d-none d-md-block"></div>
+                          <div class="carousel-caption d-none d-md-block">
+                            <h3>Slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                           </div>
-                          <div class="col-auto d-flex align-items-center px-2">
-                            <span class="legend me-2 bg-success"></span>
-                            <span>Shared</span>
-                            <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">201MB</span>
+                        </div>
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" alt="" src="./static/photos/fairy-lights-at-the-beach-in-bulgaria.jpg">
+                          <div class="carousel-caption-background d-none d-md-block"></div>
+                          <div class="carousel-caption d-none d-md-block">
+                            <h3>Slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                           </div>
-                          <div class="col-auto d-flex align-items-center ps-2">
-                            <span class="legend me-2"></span>
-                            <span>Free</span>
-                            <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">612MB</span>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" alt="" src="./static/photos/woman-working-on-laptop-at-home-office.jpg">
+                          <div class="carousel-caption-background d-none d-md-block"></div>
+                          <div class="carousel-caption d-none d-md-block">
+                            <h3>Slide label</h3>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                           </div>
                         </div>
                       </div>
-                    </div>
+                      <a class="carousel-control-prev" href="#carousel-captions" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carousel-captions" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </a>
+                    </div> -->
                   </div>
-                  <div class="col-12">
-                    <div class="card" style="height: 28rem">
-                      <div class="card-body card-body-scrollable card-body-scrollable-shadow">
-                        <div class="divide-y">
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar">JL</span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Jeffie Lewzey</strong> commented on your <strong>"I'm not a witch."</strong> post.
-                                </div>
-                                <div class="text-muted">yesterday</div>
-                              </div>
-                              <div class="col-auto align-self-center">
-                                <div class="badge bg-primary"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/002m.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  It's <strong>Mallory Hulme</strong>'s birthday. Wish him well!
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                              <div class="col-auto align-self-center">
-                                <div class="badge bg-primary"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/003m.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Dunn Slane</strong> posted <strong>"Well, what do you want?"</strong>.
-                                </div>
-                                <div class="text-muted">today</div>
-                              </div>
-                              <div class="col-auto align-self-center">
-                                <div class="badge bg-primary"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/000f.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Emmy Levet</strong> created a new project <strong>Morning alarm clock</strong>.
-                                </div>
-                                <div class="text-muted">4 days ago</div>
-                              </div>
-                              <div class="col-auto align-self-center">
-                                <div class="badge bg-primary"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/001f.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Maryjo Lebarree</strong> liked your photo.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar">EP</span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Egan Poetz</strong> registered new client as <strong>Trilia</strong>.
-                                </div>
-                                <div class="text-muted">yesterday</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/002f.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Kellie Skingley</strong> closed a new deal on project <strong>Pen Pineapple Apple Pen</strong>.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/003f.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Christabel Charlwood</strong> created a new project for <strong>Wikibox</strong>.
-                                </div>
-                                <div class="text-muted">4 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar">HS</span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Haskel Shelper</strong> change status of <strong>Tabler Icons</strong> from <strong>open</strong> to <strong>closed</strong>.
-                                </div>
-                                <div class="text-muted">today</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/006m.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Lorry Mion</strong> liked <strong>Tabler UI Kit</strong>.
-                                </div>
-                                <div class="text-muted">yesterday</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/004f.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Leesa Beaty</strong> posted new video.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/007m.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Perren Keemar</strong> and 3 others followed you.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar">SA</span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Sunny Airey</strong> upload 3 new photos to category <strong>Inspirations</strong>.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/009m.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Geoffry Flaunders</strong> made a <strong>$10</strong> donation.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/010m.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Thatcher Keel</strong> created a profile.
-                                </div>
-                                <div class="text-muted">3 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/005f.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Dyann Escala</strong> hosted the event <strong>Tabler UI Birthday</strong>.
-                                </div>
-                                <div class="text-muted">4 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar" style="background-image: url(./static/avatars/006f.jpg)"></span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Avivah Mugleston</strong> mentioned you on <strong>Best of 2020</strong>.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="row">
-                              <div class="col-auto">
-                                <span class="avatar">AA</span>
-                              </div>
-                              <div class="col">
-                                <div class="text-truncate">
-                                  <strong>Arlie Armstead</strong> sent a Review Request to <strong>Amanda Blake</strong>.
-                                </div>
-                                <div class="text-muted">2 days ago</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header border-0">
-                    <div class="card-title">Development activity</div>
-                  </div>
-                  <div class="position-relative">
-                    <div class="position-absolute top-0 left-0 px-3 mt-1 w-75">
-                      <div class="row g-2">
-                        <div class="col-auto">
-                          <div class="chart-sparkline chart-sparkline-square" id="sparkline-activity"></div>
-                        </div>
-                        <div class="col">
-                          <div>Today's Earning: $4,262.40</div>
-                          <div class="text-muted"><!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
-                            +5% more than yesterday</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="chart-development-activity"></div>
-                  </div>
-                  <div class="card-table table-responsive">
-                    <table class="table table-vcenter">
-                      <thead>
-                        <tr>
-                          <th>User</th>
-                          <th>Commit</th>
-                          <th>Date</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="w-1">
-                            <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
-                          </td>
-                          <td class="td-truncate">
-                            <div class="text-truncate">
-                              Fix dart Sass compatibility (#29755)
-                            </div>
-                          </td>
-                          <td class="text-nowrap text-muted">28 Nov 2019</td>
-                        </tr>
-                        <tr>
-                          <td class="w-1">
-                            <span class="avatar avatar-sm">JL</span>
-                          </td>
-                          <td class="td-truncate">
-                            <div class="text-truncate">
-                              Change deprecated html tags to text decoration classes (#29604)
-                            </div>
-                          </td>
-                          <td class="text-nowrap text-muted">27 Nov 2019</td>
-                        </tr>
-                        <tr>
-                          <td class="w-1">
-                            <span class="avatar avatar-sm" style="background-image: url(./static/avatars/002m.jpg)"></span>
-                          </td>
-                          <td class="td-truncate">
-                            <div class="text-truncate">
-                              justify-content:between ⇒ justify-content:space-between (#29734)
-                            </div>
-                          </td>
-                          <td class="text-nowrap text-muted">26 Nov 2019</td>
-                        </tr>
-                        <tr>
-                          <td class="w-1">
-                            <span class="avatar avatar-sm" style="background-image: url(./static/avatars/003m.jpg)"></span>
-                          </td>
-                          <td class="td-truncate">
-                            <div class="text-truncate">
-                              Update change-version.js (#29736)
-                            </div>
-                          </td>
-                          <td class="text-nowrap text-muted">26 Nov 2019</td>
-                        </tr>
-                        <tr>
-                          <td class="w-1">
-                            <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000f.jpg)"></span>
-                          </td>
-                          <td class="td-truncate">
-                            <div class="text-truncate">
-                              Regenerate package-lock.json (#29730)
-                            </div>
-                          </td>
-                          <td class="text-nowrap text-muted">25 Nov 2019</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+              
 @endsection

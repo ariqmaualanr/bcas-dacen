@@ -6,11 +6,11 @@
               </div>
               <div class="col-12 col-lg-auto mt-3 mt-lg-0">
                 <ul class="list-inline list-inline-dots mb-0">
-                  <li class="list-inline-item">
+                  <!-- <li class="list-inline-item">
                     Copyright &copy; 2023
-                    <a href="." class="link-secondary">Tabler</a>.
+                    <a href="." class="link-secondary">Dacen</a>.
                     All rights reserved.
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>

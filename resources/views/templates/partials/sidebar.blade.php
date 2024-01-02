@@ -5,7 +5,7 @@
           </button>
           <h1 class="navbar-brand navbar-brand-autodark">
             <a href="/">
-              <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+              <img src="./static/dacen-txt.svg" width="300" height="64" alt="Dacen" class="navbar-brand-image">
             </a>
           </h1>
           <div class="navbar-nav flex-row d-lg-none">
@@ -22,6 +22,26 @@
                   Sponsor
                 </a>
               </div>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                      // Dapatkan nama halaman saat ini dari URL
+                      var currentPage = window.location.pathname.split("/").pop();
+
+                      // Hapus kelas 'active' dari semua tautan sidebar
+                      var sidebarLinks = document.querySelectorAll(".nav-item a");
+                      sidebarLinks.forEach(function(link) {
+                          link.classList.remove("active");
+                      });
+
+                      // Tentukan tautan sidebar yang sesuai dengan halaman saat ini
+                      var activeLink = document.getElementById(currentPage + "-link");
+                      if (activeLink) {
+                          // Tambahkan kelas 'active' ke tautan yang sesuai
+                          activeLink.classList.add("active");
+                      }
+                  });
+              </script>
             </div>
             <div class="d-none d-lg-flex">
               <a href="?theme=dark" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip"
@@ -121,7 +141,7 @@
             </div>
             <div class="nav-item dropdown">
               <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
-                <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
+              <div class="h1 mb-3 me-2">{{ Auth::user()->name }}</div>
                 <div class="d-none d-xl-block ps-2">
                   <div>Paweł Kuna</div>
                   <div class="mt-1 small text-muted">UI Designer</div>
@@ -129,26 +149,53 @@
               </a>
               <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 <a href="#" class="dropdown-item">Status</a>
-                <a href="./profile.html" class="dropdown-item">Profile</a>
-                <a href="#" class="dropdown-item">Feedback</a>
-                <div class="dropdown-divider"></div>
-                <a href="./settings.html" class="dropdown-item">Settings</a>
-                <a href="./sign-in.html" class="dropdown-item">Logout</a>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
               </div>
             </div>
           </div>
           <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
-              <li class="nav-item">
-                <a class="nav-link" href="./" >
-                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/ -->
+              <li class="nav-item{{ request()->routeIs('home') ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('home') }}">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
-                  </span>
-                  <span class="nav-link-title">
-                    Home
-                  </span>
+                        <!-- Isikan kode SVG atau ikon Anda di sini -->
+                    </span>
+                    <span class="nav-link-title">
+                        Home
+                    </span>
                 </a>
-              </li>
+            </li>
+
+              <li class="nav-item{{ request()->is('handover*') ? ' active' : '' }}">
+                <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false">
+                    <span class="nav-link-icon d-md-none d-lg-inline-block">
+                        <!-- Download SVG icon from http://tabler-icons.io/i/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-box-left-middle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                            <path d="M9 15h-2" />
+                            <path d="M13 12h-6" />
+                            <path d="M11 9h-4" />
+                        </svg>
+                    </span>
+                    <span class="nav-link-title">
+                        Task
+                    </span>
+                </a>
+                <div class="dropdown-menu">
+                    <div class="dropdown-menu-columns">
+                        <div class="dropdown-menu-column">
+                            <a class="dropdown-item" href="{{ route('handover.index') }}">
+                                Handover Job
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
@@ -167,19 +214,12 @@
                       <a class="dropdown-item" href="./karyawan">
                         Employee Data
                       </a>
+                      <a class="dropdown-item" href="./checklist">
+                        Daily Checklist
+                      </a>
                       
                   </div>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./form-elements.html" >
-                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
-                  </span>
-                  <span class="nav-link-title">
-                    Forms
-                  </span>
-                </a>
               </li>
               
               <li class="nav-item dropdown">
@@ -192,23 +232,43 @@
                   </span>
                 </a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="https://tabler.io/docs" target="_blank" rel="noopener">
+                  <a class="dropdown-item" href="./about">
                     Documentation
-                  </a>
-                  <a class="dropdown-item" href="./changelog.html">
-                    Changelog
-                  </a>
-                  <a class="dropdown-item" href="https://github.com/tabler/tabler" target="_blank" rel="noopener">
-                    Source code
-                  </a>
-                  <a class="dropdown-item text-pink" href="https://github.com/sponsors/codecalm" target="_blank" rel="noopener">
-                    <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
-                    Sponsor project!
-                  </a>
-                </div>
+                  </a>     
+                </div>                
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
+                  <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/lifebuoy -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                  <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                  <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
+                </svg>
+                                  </span>
+                  <span class="nav-link-title">
+                  Halo! {{ Auth::user()->name }}
+                  </span>
+                </a>
+                <div class="dropdown-menu">
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="card-btn" style="color: red;"><!-- Download SVG icon from http://tabler-icons.io/i/phone -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M13 21h-6a2 2 0 0 1 -2 -2v-6a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v.5"></path>
+                        <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
+                        <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
+                        <path d="M22 22l-5 -5"></path>
+                        <path d="M17 22l5 -5"></path>
+                      </svg>
+                      Logout</a>    
+                </div>                
               </li>
             </ul>
           </div>
+
+
+          
         </div>
       </aside>

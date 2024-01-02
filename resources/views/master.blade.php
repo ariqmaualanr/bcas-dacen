@@ -2680,6 +2680,24 @@
       	})).render();
       });
       // @formatter:on
+
+            <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+      <!-- Script untuk menandai elemen navigasi sebagai "active" -->
+      <script>
+        $(document).ready(function() {
+          var currentPath = window.location.pathname;
+          $('.nav-link').each(function() {
+            var navLink = $(this);
+            var navItem = navLink.closest('.nav-item');
+            var navHref = navLink.attr('href');
+            if (currentPath === navHref) {
+              navItem.addClass('active');
+            }
+          });
+        });
+      </script>
     </script>
   </body>
 </html>
